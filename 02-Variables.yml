@@ -16,4 +16,13 @@
       ansible.builtin.debug:
         msg : URL = {{ URL }}
 
+# The below play is declare  a Var From the task level
 
+- name : declare a var at Task level
+  hosts : localhost
+  tasks :
+    - name : print url
+      ansible.builtin.debug:
+        msg : URL = {{ URL }}
+      vars:
+        URL = tasklevel.var.com
