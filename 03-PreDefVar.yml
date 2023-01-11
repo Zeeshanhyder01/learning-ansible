@@ -1,0 +1,8 @@
+#ANSIBLE PRE-DEFINED VARIABLES
+
+- name : Facts
+  hosts : localhost
+  tasks :
+    - name : Print HostName
+      ansible.builtin.debug:
+        msg : HostName = {{ ansible_hostname }}
