@@ -9,3 +9,5 @@
     - name: Print FQDN
       ansible.builtin.debug:
         msg:  "{{ ansible_fqdn }}"
+
+# IF ANY VALUE STARTING WITH VARIABLE WE NEED TO USE QUOTES (MANDATORY) EITHER SINGLE OR DOUBLE QUOTES
