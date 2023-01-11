@@ -4,6 +4,6 @@
     - name : print Hello
       ansible.builtin.debug:
         msg : Hello Zeeshan
-    - #name : Print Fruit
+    - name : Print Fruit
       debug:
         msg : Apple
