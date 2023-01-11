@@ -6,7 +6,7 @@
     - name : Print URL
       ansible.builtin.debug:
         msg: URL = {{ URL }}
-
+# The below play is access a Var From a File
 - name : variable from a file
   hosts : localhost
   vars_files:
