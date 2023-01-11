@@ -26,3 +26,12 @@
         msg : URL = {{ URL }}
       vars:
         URL : tasklevel.var.com
+
+# The below play is declare  a Var From the Inventory file
+
+- name : declare a var from Inventory
+  hosts : localhost
+  tasks :
+    - name : print url
+      ansible.builtin.debug:
+        msg : URL = {{ URL }}
