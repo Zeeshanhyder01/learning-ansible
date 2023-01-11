@@ -6,3 +6,6 @@
     - name : Print HostName
       ansible.builtin.debug:
         msg : HostName = {{ ansible_hostname }}
+    - name: Print FQDN
+      ansible.builtin.debug:
+        msg:  "{{ ansible_fqdn }}"
