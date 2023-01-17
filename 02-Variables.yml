@@ -43,7 +43,7 @@
   tasks :
     - name : run uptime command
       ansible.builtin.shell : uptime
-      register : OUTPUT_UPTIME
+      register : OUTPUT
     - name : print the output of Uptime command
       ansible.builtin.debug :
-        msg : {{"OUTPUT_UPTIME"}}
+        msg : {{"OUTPUT"}}
