@@ -9,3 +9,15 @@
     - name : print the output of ls command
       ansible.builtin.debug :
         msg : "{{ OUTPUT }}"
+
+#set_fact set a variable using task
+
+- name : Setfact variable
+  hosts : localhost
+  tasks :
+    - name : storing a variable in a standard name
+      ansible.builtin.set_fact  :
+        UPTIME : "{{output"}}
+    - name : print out put of shell command
+      ansible.builtin.debug:
+        msg :"{{ UPTIME }}"
