@@ -35,3 +35,15 @@
     - name: print url
       ansible.builtin.debug:
         msg : URL = {{ URL }}
+
+ # Ansible runtime variables
+
+- name : Register Variable
+  hosts : localhost
+  tasks :
+    - name : run uptime command
+      ansible.builtin.shell : uptime
+      register : OUTPUT_UPTIME
+    - name : print the output of Uptime command
+      ansible.builtin.debug :
+        msg : {{"OUTPUT_UPTIME"}}
