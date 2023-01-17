@@ -3,9 +3,9 @@
 - name : Register Variable
   hosts : localhost
   tasks :
-    - name : run uptime command
-      ansible.builtin.shell : uptime
+    - name : run ls command
+      ansible.builtin.shell : ls
       register : OUTPUT
-    - name : print the output of Uptime command
+    - name : print the output of ls command
       ansible.builtin.debug :
         msg : "{{ OUTPUT }}"
