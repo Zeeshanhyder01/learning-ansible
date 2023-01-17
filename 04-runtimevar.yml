@@ -15,6 +15,9 @@
 - name : Setfact variable
   hosts : localhost
   tasks :
+    - name: run uptime command
+      ansible.builtin.shell: uptime
+      register: output
     - name : storing a variable in a standard name
       ansible.builtin.set_fact  :
         UPTIME : "{{output}}"
