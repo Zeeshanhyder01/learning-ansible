@@ -1,6 +1,6 @@
 - name : variables
   hosts : localhost
-  var :
+  vars :
     url : example.var.com
   tasks :
     name : var at play level
