@@ -1,4 +1,4 @@
-- name : variables
+- name : Variables
   hosts : localhost
   vars :
     url : example.var.com
