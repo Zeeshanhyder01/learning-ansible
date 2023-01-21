@@ -28,4 +28,11 @@
         URL: tasklevel.var.com
 
 
+- name : declare a variable from Inventory
+  hosts : localhost
+  tasks :
+    - name: print url
+      ansible.builtin.debug:
+        msg : URL = {{ URL }}
+
 
