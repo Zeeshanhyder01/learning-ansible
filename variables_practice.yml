@@ -18,14 +18,14 @@
         msg: URL = {{URL}}
 
 
-- name : Task level variable
-  hosts : localhost
-  tasks :
-    - name : printing url from task level var
-      ansible.builtin.debug :
-        msg : URL = {{URL}}
-        vars :
-          URL : Tasklevel.var.com
+- name: declare a var at Task level
+  hosts: localhost
+  tasks:
+    - name: print url
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+      vars:
+        URL: tasklevel.var.com
 
 
 
