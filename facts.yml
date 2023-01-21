@@ -4,3 +4,7 @@
     - name : printing Hostname
       ansible.builtin.debug :
         msg : HOSTNAME = {{ ansible_hostname }}
+
+- name: Print all available facts
+  ansible.builtin.debug:
+    var: ansible_facts
