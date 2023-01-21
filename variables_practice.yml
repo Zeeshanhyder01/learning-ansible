@@ -1,0 +1,8 @@
+- name : variables
+  hosts : localhost
+  var :
+    url : example.var.com
+  tasks :
+    name : var at play level
+    ansible.builtin.debug :
+      msg : url ={{url}}
