@@ -15,9 +15,9 @@
   hosts : localhost
   tasks :
     - name : Run Uptime command
-      ansible.builtin.shell : uptime
+      ansible.builtin.shell : ls
       register : Shell_output
-    - name : Print Uptime command output
+    - name : Print ls command output
       ansible.builtin.debug :
         msg : "{{Shell_output}}"
 
