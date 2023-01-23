@@ -19,5 +19,5 @@
       register : Shell_output
     - name : Print ls command output
       ansible.builtin.debug :
-        msg : "{{Shell_output}}"
+        msg : "{{Shell_output.stdout}}"
 
