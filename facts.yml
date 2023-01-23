@@ -21,3 +21,20 @@
       ansible.builtin.debug :
         msg : "{{Shell_output.stdout}}"
 
+#Storing a variable in standard name
+
+- name : Run Time Variables
+  hosts : localhost
+  tasks :
+    - name : Run Uptime command
+      ansible.builtin.shell : ls
+      register : Shell_output
+    - name : storing a variable in a standard name
+      ansible.builtin.set_fact :
+        UPTIME : "{{Shell_output.stdout}}"
+
+    - name : print out put of shell command
+      ansible.builtin.debug:
+        msg : "{{UPTIME}}"
+
+
