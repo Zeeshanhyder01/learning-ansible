@@ -2,5 +2,5 @@
   ansible.builtin.debug:
     msg : Hello
 - name : print URL
-  ansible.builtin.debug:
+  ansible.builtin.debug :
     msg: URL = {{URL}}
