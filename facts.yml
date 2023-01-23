@@ -8,3 +8,16 @@
     - name: Print date and time
       ansible.builtin.debug :
         msg : Date_Time = {{ ansible_date_time }}
+
+#Ansible Run time Commands--1.from task o/p (register)  2. set a variable using task (set_fact)
+
+- name : Run Time Variables
+  hosts : localhost
+  tasks :
+    - name : Run Uptime command
+      ansible.builtin.shell : uptime
+      register : Shell_output
+    - name : Print Uptime command output
+      ansible.builtin.debug :
+        msg : "{{Shell_output}}"
+
