@@ -3,8 +3,8 @@
   tasks :
     - name : Loop example
       debug :
-        msg : Fruit = {{ item }}
+        msg : Fruit = {{item}}
       loop :
-        -apple
-        -banana
-        -Mango
+        - apple
+        - banana
+        - Mango
