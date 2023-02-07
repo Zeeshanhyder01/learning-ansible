@@ -8,3 +8,11 @@
         - apple
         - banana
         - Mango
+
+    - name: Loop example with Mapping
+      debug:
+        msg: Fruit  Name = {{item.name}}, Quantity = {{item.quantity}}
+      loop:
+        - {name : apple , quantity : 10}
+        - {name : mango , quantity : 12}
+        - {name : banana , quantity : 14}
